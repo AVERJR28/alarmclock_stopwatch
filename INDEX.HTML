@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--instructs internet explorer to use its latest rendering engine-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--configures the viewport for responsive design,ensuring proper scalling on different devices-->
+    <meta name="Alarm Clock and stopwatch" content="Alarm Clock and Stop watch" />
+    <!--its meta data its like a description for the code-->
+    <title>Alarm Clock</title>
+
+    <link rel = "icon" href="https://media.istockphoto.com/id/1156344814/vector/yellow-ringing-alarm-clock-icon-isolated-on-white-background-wake-up-time-desk-clock-vector.jpg?s=612x612&w=0&k=20&c=VlN7Ur8gVk12wKPupugOpIQA-YHJP448nAaNUel9bek="/>
+
+    <!-- Stylesheet-->
+
+<link rel = "stylesheet" href = "alarm_clock_and_stopwatch_styling.css" />
+
+</head>
+
+<body>
+    <div class= "page-title">
+      <h1>ALARM CLOCK and STOP WATCH</h1>
+    </div>
+    <div class="main-container d-flex">
+        <!--creates the main container with a flex displaywhich helps hold the clock, alarm form, and set alarms-->
+      <div class="clock-container d-flex">
+        <!--containe for clock and alarm related elements , using a flex display-->
+        <div class="current-time mb" id= "current-time">_ : _ : _ </div>
+        <!--displays the current time. the initial content is mentioned ,it will be filles by JS-->
+        <div class="stopwatch-container">
+          <div id="stopwatch">00:00:00</div>
+          <button class="btn submit-button"   onclick="startStopwatch()">Start</button>
+          <button class= "btn submit-button" onclick="stopStopwatch()">Stop</button>
+          <button class= "btn submit-button" onclick="resetStopwatch()">Reset</button>
+          </div>
+        
+        <form class="alarm-form d-flex mb">
+          <!--form for setting the alarm, containing the dropdown for hours, minutes, seconds, and AM/PM-->
+          <div>
+          <select name="hours" id="hours" required></select>
+
+         <select required name="minutes" id="minutes"></select>
+
+          <select required name="seconds" id="seconds"></select>
+          <select required name="am-pm" id="am-pm">
+            <option value="AM">AM</option>
+            <option value="PM">PM</option>
+          </select>
+          </div>
+          <button class="btn submit-button" id="submitButton" type="submit">Set Alarm</button>
+          <!--button to submit the alarm form and set the alarm-->
+        </form>
+        <div class="set-alarm-container">
+          <div class="set-alarm-container-title mb">ALARMS</div>
+          <!--container for displaying set alarms-->
+          <div class="alarms-container" id= "alarms-container"></div>
+        </div>
+      </div>
+    </div>
+    
+
+    <!--JavaScript File--> 
+    <script src="alarm_clock_and_stopwatch_functionality.JS"></script><!--this is the code that links the tis file to a JS file that handles the functionality of this alarm clock, like setting the alarm and alrm display functionality-->
+  </body>
+</html>
+</html>

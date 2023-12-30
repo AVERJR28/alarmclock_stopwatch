@@ -1,0 +1,174 @@
+/* GLobal Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Impact, fantasy;
+    }
+  
+  .d-flex {
+    display: flex;
+  }
+  
+  .btn {
+    outline: none;
+    border: none;
+    background-color: rgb(233, 192, 114);
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 1px;
+    transition: all 0.3s ease-in-out;
+  }
+  select {
+    appearance: none;
+    outline: black;
+    background-color: wheat;
+    padding: 0.5rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 2rem;
+    margin-right: 0.3rem;
+    cursor: pointer;
+    color: #0E141B;
+    border-color: black;
+  }
+  
+  .mb {
+    margin-bottom: 1rem;
+  }
+  
+  /* End GLobal Styles */
+  
+  .main-container {
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-image: url('maincontainer_background.jpg');
+  }
+ 
+  .clock-container {
+    padding: 2rem;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    background-image:url('clock_stopwatchcontainer.jpg');
+   position:fixed;
+    right: 150px;
+  }
+
+
+  .current-time {
+    font-size: 2rem;
+    color: black;
+  }
+  
+  .alarm-form {
+    justify-content: space-between;
+    width: 100%;
+
+  }
+  
+  .submit-button {
+    border-color: black;
+    border: 10px;
+    border-radius: 2rem;
+    font-weight: bold;
+  }
+  
+  .set-alarm-container {
+    width: 100%;
+  }
+  
+  .set-alarm-container .set-alarm-container-title {
+    color: black;
+    font-weight: normal;
+    font-size: 1rem;
+  }
+  
+  .alarm {
+    justify-content: space-between;
+    border-radius: 30px;
+    padding: 0.5rem 1rem;
+    align-items: center;
+  
+  }
+  .alarm .delete-alarm {
+    border-radius: 2rem;
+    background-color: rgba(230, 13, 13, 0.918);
+    font-weight: bold;
+    color: wheat;
+    font-size:xx-medium;
+  }
+  
+  .time {
+    color: #0E141B;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  .btn:focus,
+  .btn:hover {
+    box-shadow: rgb(89, 238, 109) 4px 4px 4px 1px inset, #bbec09 -2px -2px 10px 1px inset;
+  }
+  
+  .page-title  {
+     background-image: url('maincontainer_background.jpg');
+    align-items: center;
+    text-align: center;
+    color: rgb(233, 157, 15);
+     }
+/* Add styles for the stopwatch display and buttons */
+.stopwatch-container {
+  text-align: center;
+  background-image:url('clock_stopwatchcontainer.jpg');
+  position: fixed;
+  left: 200px;
+  padding: 2rem;
+  justify-content: center;
+  border-radius: 50px;
+  width: 450px;
+  min-height: 200px;
+  font-size: 2rem;
+}
+
+#stopwatch {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.button {
+  font-size: 16px;
+  margin: 5px;
+}
+     /* Define the animation */
+@keyframes dance {
+    0% { transform: translateY(0); }
+    25% { transform: translateY(-5px); }
+    50% { transform: translateY(0); }
+    75% { transform: translateY(5px); }
+    100% { transform: translateY(0); }
+  }
+  
+  /* Apply the animation on hover */
+  .page-title:hover {
+    animation: dance 0.5s infinite;
+  }
+  
+  
+  /* style of devices of screen size less than 768px */
+  @media only screen and (min-width: 600px) {
+    /* adding padding to container */
+    .main-container {
+      padding-block: 2rem;
+    }
+    .clock-container{
+        justify-content: center;
+        border-radius: 50px;
+        width: 450px;
+        min-height: auto;
+    }
+  }
